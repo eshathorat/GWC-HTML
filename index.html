@@ -4,7 +4,27 @@
   <link rel="stylesheet" href="esha1.css">
   <link href="https://fonts.googleapis.com/css?family=Khand&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text&display=swap" rel="stylesheet">
-  <script src="sample.js"></script>
+  <script>
+function INFO(evt, sixname) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(sixname).style.display = "block";
+  evt.currentTarget.className += " active";
+}</script>
 </head>
 <body>
   <h1>Esha’s Profile</h1>
